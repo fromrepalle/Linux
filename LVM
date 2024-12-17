@@ -1,0 +1,22 @@
+Logical Volume Manager(LVM):-  A tool in Linux used to manage disk storage more flexibly than traditional partitioning methods. LVM allows you to create, resize, and manage disk storage dynamically without disrupting the filesystem.
+Components of LVM
+
+LVM has three key components:
+
+Physical Volume (PV):-
+A physical storage device or partition that is initialized for LVM.
+Example: /dev/sda1, /dev/sdb, etc.
+
+Volume Group (VG):-
+A collection of Physical Volumes (PVs) combined into a single pool of storage.
+VGs abstract the physical storage devices.
+
+Logical Volume (LV):-
+Logical partitions created within a Volume Group.
+LVs are where filesystems are created (e.g., ext4, xfs).
+
+commands:-
+lvmdiskscan
+lsblk
+lsblk -p
+fdisk -l
