@@ -20,3 +20,15 @@ lvmdiskscan
 lsblk
 lsblk -p
 fdisk -l
+pvcreate /dev/sdb
+pvs
+vgcreate vg_app /dev/sdb
+vgs
+lvcreate -L 20G -n lv_data vg_app
+lvs
+lvdisplay
+vgdisplay
+pvdisplay
+mkfs -t ext4 /dev/vg_app/lv_data
+mkdir /data
+mount /dev/vg_app/lv_data /data
